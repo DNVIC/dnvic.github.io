@@ -1,3 +1,3 @@
-document.getElementByClassName("btn").onclick = function () {
-  location.href = document.getElementByClassName("btn").id;
+document.getElementByClassName("btn").addEventListener("click", function(event) {
+  location.href = event.target.id;
 };
