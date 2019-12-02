@@ -4,3 +4,5 @@ def printline(var text) {
   par.appendChild(text2);
   document.body.appendChild(par);
 }
+
+printline("4")
