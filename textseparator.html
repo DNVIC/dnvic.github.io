@@ -3,12 +3,22 @@
 <script>
 
 function myfunction() {
-
-
-document.getElementById("x").value
-
-
-
+  var text = document.getElementById("x").value;
+  var testcount = 0;
+  var teststring = "";
+  for(var i = 0; i < text.length; i++) {
+    var c = text.charAt(i);
+    if(c != ' ' || c != '.') {
+      testcount += 1;
+      teststring += c;
+      if(testcount % 9 == 0) {
+        teststring += "\n";
+      }
+      
+    }
+  }
+  document.getElementById("y").value = teststring;
+}
 </script>
 
 <form id=x> </form>
