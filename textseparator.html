@@ -8,12 +8,10 @@ function myfunction() {
   var teststring = "";
   for(var i = 0; i < text.length; i++) {
     var c = text.charAt(i);
-    if(c != ' ' && c != '.' && c != '\t' && c != '\n') {
+    if(c != '\t') {
       testcount += 1;
       teststring += c;
-      if(testcount % 9 == 0) {
-        teststring += "<br>";
-      }
+      
       
     }
   }
