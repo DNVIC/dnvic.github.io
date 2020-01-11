@@ -1,57 +1,39 @@
 <html>
 <head>
-<title> stop looking here you gay idiot </title>
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="button.css">
-<!--ads-->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-3194879031784573",
-          enable_page_level_ads: true
-     });
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-3194879031784573",
-          enable_page_level_ads: true
-     });
-</script>
-<!-- end ads -->
+  <meta charset="UTF-8">
 </head>
 <body>
-<!-- hey this isn't a fucking scavenger hunt you idiot i was just bored -->
-<h1> I'm a fricking gay idiot </h1>
-<div class=center>
-<button id="http://www.twitch.tv/dnvic" class="btn arial"> my twatch </button>
-<button id="http://www.youtube.com/mariopikminfunnyl" class="btn arial"> my tube of you </button>
-<button id="http://www.twitter.com/therealdnvic" class="btn arial"> tweet tweet motherfricker</button>
-</div>
-     
-<br>
-<div class=center>
-<button id="https://dnvic.ga/SMR-Server-Side-Code/OBS-Communicator/" class="btn arial"> SMR OBS program </button>
-</div>
-<!--
-<a href="http://twitch.tv/dnvic"> my twatch </a> <br />
-<a href="http://youtube.com/mariopikminfunnyl"> my tube of you </a> <br />
-<a href="http://twitter.com/therealdnvic"> tweet tweet motherfucker </a> <br />
--->
+
+<script>
+
+
   
-<br />
-<br />
-<div class="center arial">
-<div class="linkselector">
-  <button onclick="dropdown()" class="thelink">Webpage list</button>
-  <div id="theselector" class="insideselector">
-    <a class=disabled>here</a>
-    <a href=scripts.html>Future</a>
-  </div>
-</div>
-</div>
+function setStorage() {
+  var language = document.getElementById("languageSelector").value
+  localStorage.setItem('Language', language);
+  location.reload();
+}
 
-<script src="commonscripts.js" > </script>
+</script>
+<select id=languageSelector>
+<option value="en" id=en> English </option>
+<option value="es"  id=es> Español </option>
 
-</body>
+</select>
+<button onclick=setStorage()> test </button>
+<p class=text1> Hello SioN this is in English </p>
+
+<script>
+if(localStorage.getItem('Language') === 'es') {
+  document.getElementsByClassName("text1")[0].innerHTML = "Hola SioN está es en Español";
+}
+if(localStorage.getItem("Language") === "null") {
+  localStorage.setItem("Language", "en");
+}
+
+var selectedLanguage = localStorage.getItem("Language");
+document.getElementById("languageSelector").value = selectedLanguage;
+
+</script>
+  </body>
 </html>
