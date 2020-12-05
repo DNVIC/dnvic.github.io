@@ -22,7 +22,7 @@ function setStorage() {
 </select>
 <button onclick=setStorage()> test </button>
 <p class=text1> Hello SioN this is in English </p>
-
+<p> You may have gone here on accident when trying to access the <a href=pokemon-tcg-booster-pack-modular-simulator>Pokemon Trading Card Simulator</a>, this is just a test for something else. </p>
 <script>
 if(localStorage.getItem('Language') === 'es') {
   document.getElementsByClassName("text1")[0].innerHTML = "Hola SioN está es en Español";
@@ -30,7 +30,6 @@ if(localStorage.getItem('Language') === 'es') {
 if(localStorage.getItem("Language") === "null") {
   localStorage.setItem("Language", "en");
 }
-
 var selectedLanguage = localStorage.getItem("Language");
 document.getElementById("languageSelector").value = selectedLanguage;
 
